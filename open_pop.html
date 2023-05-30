@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>openPop</title>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+   </head>
+   <body>
+      <style>
+         .videolayerPop {
+            transition: all 0.3s ease;
+            opacity: 0;
+            pointer-events: none;
+            transform: scale(100%);
+         }
+         .videolayerPop.on {
+            opacity: 1;
+            transform: scale(80%);
+            pointer-events: inherit;
+         }
+
+         select {
+            padding: 10px 14px;
+            position: relative;
+         }
+         .selWrap {
+            position: relative;
+            width: 200px;
+         }
+         .selWrap::after {
+            font-family: bootstrap-icons;
+            content: "\F229";
+            position: absolute;
+            right: 2px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 3;
+            width: 40px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            pointer-events: none;
+         }
+         select {
+            width: 100%;
+            border-radius: 4px;
+         }
+         option {
+            height: 140px;
+         }
+
+         .videolayerPop {
+            position: fixed;
+            z-index: 100;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(100, 100, 100, 0.5);
+         }
+      </style>
+
+      <ul class="videoPops">
+         <li>
+            <a class="videoPop" href="#">video_001</a>
+            <div class="videolayerPop">
+               <video>
+                  <source src="/common/css/porducts/asset/main1.mp4" type="video/mp4" />
+               </video>
+               <a href="javascript:void(0)" class="video_close">close</a>
+            </div>
+         </li>
+         <li>
+            <a class="videoPop" href="#">video_002</a>
+            <div class="videolayerPop">
+               <video>
+                  <source src="/common/css/porducts/asset/main2.mp4" type="video/mp4" />
+               </video>
+               <a href="javascript:void(0)" class="video_close">close</a>
+            </div>
+         </li>
+         <li>
+            <a class="videoPop" href="#">video_003</a>
+            <div class="videolayerPop">
+               <video>
+                  <source src="/common/css/porducts/asset/main3.mp4" type="video/mp4" />
+               </video>
+               <a href="javascript:void(0)" class="video_close">close</a>
+            </div>
+         </li>
+      </ul>
+
+      <div class="selWrap">
+         <select name="fruite" id="">
+            <option value="apple">apple</option>
+            <option value="banana">banana</option>
+         </select>
+      </div>
+
+      <script>
+         let videoClose = document.querySelectorAll(".video_close")
+         let videoPop = document.querySelectorAll(".videoPop")
+         let videolayerPop = document.querySelectorAll(".videolayerPop")
+         videoPop.forEach((elem, idx) => {
+            elem.addEventListener("click", () => {
+               elem.nextElementSibling.classList.add("on")
+            })
+         })
+         videoClose.forEach((elem) => {
+            elem.addEventListener("click", () => {
+               console.log(elem.parentElement)
+               elem.parentElement.classList.remove("on")
+            })
+         })
+      </script>
+   </body>
+</html>
