@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>chart</title>
+      <link rel="stylesheet" href="./css/box_chart.css" />
+   </head>
+   <body>
+      <div class="bar_graph">
+         <div class="box_wrap">
+            <div class="box_l">
+               <div class="box_front"></div>
+               <div class="box_back"></div>
+               <div class="box_bottom"></div>
+            </div>
+            <div class="arm_img"></div>
+            <div class="box_r">
+               <div class="box_front"></div>
+               <div class="box_back"></div>
+               <div class="box_bottom"></div>
+            </div>
+         </div>
+         <div class="chart_desc_wrap">
+            <div class="chart_desc">
+               <h2>생산성</h2>
+               <ul>
+                  <li>생산수불관리 편의성 증대 84%</li>
+                  <li>원가 관리 효율성 향상 24%</li>
+               </ul>
+            </div>
+            <div class="chart_desc">
+               <h2>다공정</h2>
+               <ul>
+                  <li>공정관리 효율성 64%</li>
+                  <li>오작동 발생 확률 감소 14%</li>
+               </ul>
+            </div>
+         </div>
+         <div class="chart_gauge_wrap">
+            <div class="gauge_wrap">
+               <div data-label="납기단축" data-per="35%" class="gauge"></div>
+            </div>
+            <div class="gauge_wrap">
+               <div data-label="원가절감" data-per="16%" class="gauge"></div>
+            </div>
+            <div class="gauge_wrap">
+               <div data-label="불량률감소" data-per="46%" class="gauge"></div>
+            </div>
+         </div>
+      </div>
+      <script>
+         let boxFront = document.querySelectorAll(".box_front")
+         let boxBack = document.querySelectorAll(".box_back")
+         let gauge = document.querySelectorAll(".gauge")
+         window.addEventListener("scroll", () => {
+            let yOffset = window.pageYOffset
+            console.log(yOffset)
+            if (yOffset > 10) {
+               for (let i = 0; i < boxFront.length; i++) {
+                  boxFront[i].classList.add("active")
+               }
+               for (let i = 0; i < boxBack.length; i++) {
+                  boxBack[i].classList.add("active")
+               }
+               for (let i = 0; i < gauge.length; i++) {
+                  gauge[i].classList.add("active")
+               }
+            }
+         })
+      </script>
+   </body>
+</html>

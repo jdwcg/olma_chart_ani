@@ -1,0 +1,375 @@
+@charset "UTF-8";
+@keyframes chartFront {
+  from {
+    height: 0;
+  }
+  to {
+    height: 180px;
+  }
+}
+@keyframes chartBack {
+  from {
+    height: 0;
+  }
+  to {
+    height: 450px;
+  }
+}
+@keyframes chartFrontR {
+  from {
+    height: 0;
+  }
+  to {
+    height: 80px;
+  }
+}
+@keyframes chartBackR {
+  from {
+    height: 0;
+  }
+  to {
+    height: 300px;
+  }
+}
+.box_wrap {
+  border: 1px dashed #ddd;
+  width: 450px;
+  height: 600px;
+  display: flex;
+  position: relative;
+  margin: 0 auto;
+}
+
+.box_r {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 158px;
+  height: 100px;
+}
+.box_r .box_front {
+  position: absolute;
+  background: dodgerblue;
+  width: 90px;
+  height: 0;
+  bottom: 10px;
+  z-index: 2;
+  left: 15px;
+  transform: skewY(10deg);
+  mix-blend-mode: multiply;
+  opacity: 0.8;
+}
+.box_r .box_front::before {
+  content: "12%";
+  position: absolute;
+  top: -55px;
+  font-size: 34px;
+  color: dodgerblue;
+  font-weight: 600;
+  left: 14px;
+  letter-spacing: -2px;
+}
+.box_r .box_front.active {
+  animation: chartFrontR 1.4s linear 0.3s 1 alternate forwards;
+}
+.box_r .box_back {
+  position: absolute;
+  background: #8ac007;
+  width: 90px;
+  height: 0;
+  bottom: 42px;
+  z-index: 1;
+  left: 45px;
+  transform: skewY(10deg);
+  opacity: 0.5;
+}
+.box_r .box_back::before {
+  content: "64%";
+  position: absolute;
+  top: -55px;
+  font-size: 34px;
+  color: #8ac007;
+  font-weight: 600;
+  left: 14px;
+  letter-spacing: -2px;
+}
+.box_r .box_back.active {
+  animation: chartBackR 3s linear 0.3s 1 alternate forwards;
+}
+.box_r .box_bottom {
+  position: absolute;
+  background: #eee;
+  width: 93px;
+  height: 80px;
+  bottom: 0;
+  transform-origin: left bottom;
+  transform: skew(-40deg, 10deg);
+}
+
+.box_l {
+  position: absolute;
+  width: 158px;
+  height: 100px;
+  left: 0;
+  bottom: 0;
+}
+.box_l .box_front {
+  position: absolute;
+  background: dodgerblue;
+  width: 90px;
+  height: 0;
+  bottom: 10px;
+  z-index: 2;
+  left: 15px;
+  transform: skewY(10deg);
+  mix-blend-mode: multiply;
+  opacity: 0.8;
+}
+.box_l .box_front::before {
+  content: "24%";
+  position: absolute;
+  top: -55px;
+  font-size: 34px;
+  color: dodgerblue;
+  font-weight: 600;
+  left: 14px;
+  letter-spacing: -2px;
+}
+.box_l .box_front.active {
+  animation: chartFront 1.4s linear 0.3s 1 alternate forwards;
+}
+.box_l .box_back {
+  position: absolute;
+  background: #8ac007;
+  width: 90px;
+  height: 0;
+  bottom: 42px;
+  z-index: 1;
+  left: 45px;
+  transform: skewY(10deg);
+  opacity: 0.5;
+}
+.box_l .box_back::before {
+  content: "84%";
+  position: absolute;
+  top: -55px;
+  font-size: 34px;
+  color: #8ac007;
+  font-weight: 600;
+  left: 14px;
+  letter-spacing: -2px;
+}
+.box_l .box_back.active {
+  animation: chartBack 3s linear 0.3s 1 alternate forwards;
+}
+.box_l .box_bottom {
+  position: absolute;
+  background: #eee;
+  width: 93px;
+  height: 80px;
+  bottom: 0;
+  transform-origin: left bottom;
+  transform: skew(-40deg, 10deg);
+}
+
+.arm_img {
+  position: absolute;
+  z-index: 3;
+  left: 43%;
+  transform: translate(-50%);
+  bottom: -50px;
+  background: center/contain url("../img/mechanical_arm.png") no-repeat;
+  width: 400px;
+  height: 400px;
+}
+
+.chart_desc_wrap {
+  display: flex;
+  justify-content: center;
+  height: inherit;
+  margin-top: 50px;
+  gap: 50px;
+}
+.chart_desc_wrap .chart_desc {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.chart_desc_wrap h2 {
+  margin: 0;
+  letter-spacing: -2px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.chart_desc_wrap ul {
+  list-style: none;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+.chart_desc_wrap ul li {
+  font-size: 14px;
+  letter-spacing: -1px;
+  margin: 0;
+  padding-left: 20px;
+  position: relative;
+}
+.chart_desc_wrap ul li:nth-child(1):before {
+  content: "∎";
+  color: #8ac007;
+  position: absolute;
+  left: 0;
+  top: -5px;
+  z-index: 2;
+  font-size: 18px;
+}
+.chart_desc_wrap ul li:nth-child(2):before {
+  content: "∎";
+  color: dodgerblue;
+  position: absolute;
+  left: 0;
+  top: -5px;
+  z-index: 2;
+  font-size: 18px;
+}
+
+.chart_gauge_wrap {
+  margin-top: 50px;
+}
+
+@keyframes opacityNum {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes gauge35 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 35%;
+  }
+}
+@keyframes gauge16 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 16%;
+  }
+}
+@keyframes gauge46 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 46%;
+  }
+}
+.chart_gauge_wrap {
+  max-width: 420px;
+  margin: 0 auto;
+  margin-top: 70px;
+}
+.chart_gauge_wrap .gauge_wrap:nth-child(1) .gauge {
+  width: 0;
+  height: 8px;
+  background: #000;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  position: relative;
+  margin-top: 40px;
+}
+.chart_gauge_wrap .gauge_wrap:nth-child(1) .gauge::before {
+  content: attr(data-label);
+  position: absolute;
+  top: -20px;
+  font-size: 13px;
+  letter-spacing: -1px;
+  word-break: keep-all;
+}
+.chart_gauge_wrap .gauge_wrap:nth-child(1) .gauge::after {
+  content: attr(data-per);
+  position: absolute;
+  right: -50px;
+  top: 40%;
+  transform: translateY(-50%);
+  font-weight: 600;
+  font-size: 24px;
+  vertical-align: text-bottom;
+  letter-spacing: -2px;
+  opacity: 0;
+  animation: opacityNum 1s linear 3s alternate forwards;
+}
+.chart_gauge_wrap .gauge_wrap:nth-child(1) .gauge.active {
+  animation: gauge35 2s linear 1s 1 alternate forwards;
+}
+.chart_gauge_wrap .gauge_wrap:nth-child(2) .gauge {
+  width: 0;
+  height: 8px;
+  background: #000;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  position: relative;
+  margin-top: 40px;
+}
+.chart_gauge_wrap .gauge_wrap:nth-child(2) .gauge::before {
+  content: attr(data-label);
+  position: absolute;
+  top: -20px;
+  font-size: 13px;
+  letter-spacing: -1px;
+  word-break: keep-all;
+}
+.chart_gauge_wrap .gauge_wrap:nth-child(2) .gauge::after {
+  content: attr(data-per);
+  position: absolute;
+  right: -50px;
+  top: 40%;
+  transform: translateY(-50%);
+  font-weight: 600;
+  font-size: 24px;
+  vertical-align: text-bottom;
+  letter-spacing: -2px;
+  opacity: 0;
+  animation: opacityNum 1s linear 3s alternate forwards;
+}
+.chart_gauge_wrap .gauge_wrap:nth-child(2) .gauge.active {
+  animation: gauge16 2s linear 1s 1 alternate forwards;
+}
+.chart_gauge_wrap .gauge_wrap:nth-child(3) .gauge {
+  width: 0;
+  height: 8px;
+  background: #000;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  position: relative;
+  margin-top: 40px;
+}
+.chart_gauge_wrap .gauge_wrap:nth-child(3) .gauge::before {
+  content: attr(data-label);
+  position: absolute;
+  top: -20px;
+  font-size: 13px;
+  letter-spacing: -1px;
+  word-break: keep-all;
+}
+.chart_gauge_wrap .gauge_wrap:nth-child(3) .gauge::after {
+  content: attr(data-per);
+  position: absolute;
+  right: -50px;
+  top: 40%;
+  transform: translateY(-50%);
+  font-weight: 600;
+  font-size: 24px;
+  vertical-align: text-bottom;
+  letter-spacing: -2px;
+  opacity: 0;
+  animation: opacityNum 1s linear 3s alternate forwards;
+}
+.chart_gauge_wrap .gauge_wrap:nth-child(3) .gauge.active {
+  animation: gauge46 2s linear 1s 1 alternate forwards;
+}
