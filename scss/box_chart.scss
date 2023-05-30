@@ -29,7 +29,7 @@ $barFz: 34px;
    }
    .box_back {
       position: absolute;
-      background: #8ac007;
+      background: #6dba00;
       width: $barWidth;
       height: 0;
       bottom: 42px;
@@ -43,7 +43,7 @@ $barFz: 34px;
          position: absolute;
          top: -55px;
          font-size: $barFz;
-         color: #8ac007;
+         color: #6dba00;
          font-weight: 600;
          left: 14px;
          letter-spacing: -2px;
@@ -97,7 +97,6 @@ $barFz: 34px;
 }
 
 .box_wrap {
-   border: 1px dashed #ddd;
    width: 450px;
    height: 600px;
    display: flex;
@@ -165,7 +164,7 @@ $barFz: 34px;
       li:nth-child(1) {
          &:before {
             content: "\220E";
-            color: #8ac007;
+            color: #6dba00;
             position: absolute;
             left: 0;
             top: -5px;
@@ -194,11 +193,12 @@ $barFz: 34px;
    .gauge {
       width: 0;
       height: 8px;
-      background: #000;
+      background: rgb(30, 148, 255);
+      background: linear-gradient(90deg, rgba(30, 148, 255, 1) 0%, rgba(30, 144, 255, 1) 25%, rgba(109, 186, 0, 1) 100%);
       border-top-right-radius: 10px;
       border-bottom-right-radius: 10px;
       position: relative;
-      margin-top: 40px;
+      margin-top: 45px;
       &::before {
          content: attr(data-label);
          position: absolute;
@@ -218,7 +218,7 @@ $barFz: 34px;
          vertical-align: text-bottom;
          letter-spacing: -2px;
          opacity: 0;
-         animation: opacityNum 1s linear 3s alternate forwards;
+         animation: opacityNum 1s linear 5s alternate forwards;
       }
    }
    .gauge.active {
@@ -238,7 +238,7 @@ $barFz: 34px;
       width: 0;
    }
    to {
-      width: 35%;
+      width: 65%;
    }
 }
 @keyframes gauge16 {
@@ -246,7 +246,7 @@ $barFz: 34px;
       width: 0;
    }
    to {
-      width: 16%;
+      width: 36%;
    }
 }
 @keyframes gauge46 {
@@ -254,13 +254,13 @@ $barFz: 34px;
       width: 0;
    }
    to {
-      width: 46%;
+      width: 86%;
    }
 }
 .chart_gauge_wrap {
    max-width: 420px;
    margin: 0 auto;
-   margin-top: 70px;
+   margin-top: 50px;
    .gauge_wrap:nth-child(1) {
       @include gaugeBar(gauge35);
    }

@@ -67,6 +67,16 @@
                for (let i = 0; i < gauge.length; i++) {
                   gauge[i].classList.add("active")
                }
+            } else if (yOffset > 0) {
+               for (let i = 0; i < boxFront.length; i++) {
+                  boxFront[i].classList.remove("active")
+               }
+               for (let i = 0; i < boxBack.length; i++) {
+                  boxBack[i].classList.remove("active")
+               }
+               for (let i = 0; i < gauge.length; i++) {
+                  gauge[i].classList.remove("active")
+               }
             }
          })
       </script>
