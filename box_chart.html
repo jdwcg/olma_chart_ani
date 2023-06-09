@@ -10,6 +10,9 @@
          h1 {
             margin: 20px 0 0 10px;
          }
+         .boxarea {
+            position: relative;
+         }
          .boxsectionarea {
             border: 1px silid red;
             margin: 0 auto;
@@ -17,28 +20,31 @@
          }
          .boxsection {
             display: flex;
-            /* gap: 20px; */
+            justify-content: space-between;
+            gap: 20px;
+            height: 760px;
          }
          .boxwrap_wrap {
             border: 1px solid #eee;
-            padding: 1rem;
+            /* padding: 1rem; */
             position: relative;
-            height: 650px;
          }
          .boxwrap_wrap:nth-child(1) {
-            top: 80px;
+            padding-top: 120px;
          }
          .boxwrap_wrap:nth-child(2) {
-            top: 40px;
+            padding-top: 60px;
          }
          .boxwrap_wrap:nth-child(3) {
-            top: 0;
+            padding-top: 0;
          }
          .boxwrap_wrap:nth-child(4) {
-            top: -40px;
+            margin-bottom: 60px;
          }
          .boxwrap_wrap:nth-child(5) {
-            top: -80px;
+            margin-bottom: 120px;
+         }
+         .boxwrap_wrap:last-child {
          }
          .containbox {
             width: 190px;
@@ -147,6 +153,7 @@
             .boxsection {
                display: flex;
                flex-direction: column;
+               height: inherit;
             }
             .box_link,
             .boxt,
@@ -191,6 +198,21 @@
             .boxinner {
                position: static;
                transform: inherit;
+            }
+            .boxwrap_wrap:nth-child(1) {
+               padding-top: inherit;
+            }
+            .boxwrap_wrap:nth-child(2) {
+               padding-top: inherit;
+            }
+            .boxwrap_wrap:nth-child(3) {
+               padding-top: inherit;
+            }
+            .boxwrap_wrap:nth-child(4) {
+               margin-bottom: inherit;
+            }
+            .boxwrap_wrap:nth-child(5) {
+               margin-bottom: inherit;
             }
          }
       </style>
@@ -279,6 +301,27 @@
                   <div class="box_link">
                      <a href="#">자세히보기</a>
                      <small> consectetur adipisicing elit. Enim quam labore ullam nulla sequi.</small>
+                  </div>
+               </div>
+            </div>
+            <div class="boxwrap_wrap">
+               <div class="boxinner">
+                  <div class="box_link">
+                     <a href="#">자세히보기</a>
+                     <small> consectetur adipisicing elit. Enim quam labore ullam nulla sequi.</small>
+                  </div>
+                  <div class="boxwrap">
+                     <div class="boxt"></div>
+                     <div class="containbox">
+                        <div class="box3d">
+                           <h1>heading</h1>
+                           <p>
+                              <small> consectetur adipisicing elit. Enim quam labore ullam nulla sequi.</small>
+                              <a href="">자세히보기</a>
+                           </p>
+                        </div>
+                        <div class="boxr"></div>
+                     </div>
                   </div>
                </div>
             </div>

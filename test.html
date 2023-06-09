@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <style>
+         #animation-container {
+            width: 400px;
+            height: 400px;
+         }
+      </style>
+   </head>
+   <body>
+      <div id="animation-container"></div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.7/lottie.min.js"></script>
+      <script>
+         var animation = bodymovin.loadAnimation({
+            container: document.getElementById("animation-container"), // 애니메이션을 표시할 컨테이너 요소 선택
+            renderer: "svg", // 애니메이션 렌더러 선택 (svg 또는 canvas)
+            loop: true, // 반복 여부
+            autoplay: true, // 자동 재생 여부
+            path: "test2.json", // JSON 파일 경로
+         })
+      </script>
+   </body>
+</html>
