@@ -8,6 +8,7 @@
          #animation-container {
             width: 400px;
             height: 400px;
+            border: 1px solid red;
          }
       </style>
    </head>
@@ -15,12 +16,26 @@
       <div id="animation-container"></div>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.7/lottie.min.js"></script>
       <script>
-         var animation = bodymovin.loadAnimation({
+         // Load the Lottie animation
+         const animation = lottie.loadAnimation({
             container: document.getElementById("animation-container"),
-            renderer: "svg", // svg or canvas
-            loop: true,
+            renderer: "svg",
+            loop: false,
             autoplay: false,
             path: "fireworks_display__.json",
+         })
+
+         // Add a click event listener to the Lottie animation
+         document.getElementById("animation-container").addEventListener("click", function () {
+            // Perform some action when the animation is clicked
+            console.log("Lottie animation clicked!")
+
+            // Play or stop the animation
+            if (animation.isPaused) {
+               animation.play()
+            } else {
+               animation.pause()
+            }
          })
       </script>
    </body>
