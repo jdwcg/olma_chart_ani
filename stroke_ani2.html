@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <style>
+         .strok_wave {
+            border: 1px solid tan;
+            display: inline-block;
+            position: relative;
+         }
+         .path {
+            stroke-dasharray: 2200;
+            stroke-dashoffset: 2200;
+            animation: dash 5s linear forwards;
+         }
+         @keyframes dash {
+            to {
+               stroke-dashoffset: 0;
+            }
+         }
+      </style>
+   </head>
+   <body>
+      <div class="strok_wave">
+         <svg width="1020" height="913" viewBox="0 0 1020 913" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="Group 57453301">
+               <path
+                  class="path"
+                  id="Vector"
+                  d="M922.001 379.237C922.001 488.074 862.886 583.108 775.001 634.008M474.001 128.218C518.726 100.804 571.342 85 627.65 85C683.958 85 736.573 100.804 781.298 128.218M489.501 640.057C455.478 626.324 418.299 618.763 379.353 618.763C315.588 618.763 256.558 639.031 208.359 673.474"
+                  stroke="#293897"
+                  stroke-width="169"
+               />
+               <path
+                  class="path"
+                  id="Vector_2"
+                  d="M922 379.019C922 272.803 865.697 179.731 781.297 128M333.297 379.019C333.297 272.803 389.6 179.731 474 128M85 912.782C85 814.02 133.677 726.623 208.358 673.256M775 633.791C731.665 658.889 681.335 673.256 627.648 673.256C583.551 673.256 541.719 663.563 504.167 646.192L502.833 645.609C498.446 643.58 487.5 638.839 487.5 638.839"
+                  stroke="#CFEBFF"
+                  stroke-width="169"
+               />
+               <path id="Vector 366" d="M157.586 596.766L262.145 747.903" stroke="white" stroke-width="22" />
+               <path id="Vector 359" d="M428.254 47L820 709.5" stroke="white" stroke-width="22" />
+               <path id="Vector 360" d="M829.961 53L443 718" stroke="white" stroke-width="22" />
+               <path id="Vector 363" d="M245 390H1019.5" stroke="white" stroke-width="22" />
+            </g>
+         </svg>
+      </div>
+   </body>
+</html>

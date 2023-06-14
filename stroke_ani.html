@@ -21,8 +21,23 @@
          .lin_ani_wrap {
             display: inline-block;
             position: relative;
+            border: 1px solid red;
          }
-         .desc_box {
+         .desc_box:nth-child(1) {
+            display: inline-block;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+         }
+         .desc_box:nth-child(2) {
+            display: inline-block;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+         }
+         .desc_box:nth-child(3) {
             display: inline-block;
             position: absolute;
             left: 50%;
@@ -49,6 +64,14 @@
    </head>
    <body>
       <div class="lin_ani_wrap">
+         <div class="desc_box">
+            <img src="img/" alt="img" />
+            <p>경리회계</p>
+         </div>
+         <div class="desc_box">
+            <img src="img/mechanical_arm.png" alt="img" />
+            <p>경리회계</p>
+         </div>
          <div class="desc_box">
             <img src="img/mechanical_arm.png" alt="img" />
             <p>경리회계</p>
