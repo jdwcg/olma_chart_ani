@@ -9,6 +9,8 @@
             border: 1px solid tan;
             display: inline-block;
             position: relative;
+            width: 1020px;
+            height: auto;
          }
          .path {
             stroke-dasharray: 2200;
@@ -20,11 +22,146 @@
                stroke-dashoffset: 0;
             }
          }
+         .bookkeeping_graph {
+            position: absolute;
+         }
+         .bookkeeping_graph p:nth-child(1) {
+            position: absolute;
+            min-width: 90px;
+            left: 313px;
+            top: 163px;
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: flex-end;
+            gap: 14px;
+            font-weight: 600;
+            letter-spacing: -1px;
+            text-align: right;
+         }
+         .bookkeeping_graph p:nth-child(2) {
+            position: absolute;
+            min-width: 160px;
+            left: 555px;
+            top: 44px;
+            display: flex;
+            gap: 14px;
+            align-items: center;
+            font-weight: 600;
+            letter-spacing: -1px;
+            text-align: center;
+            color: white;
+         }
+         .bookkeeping_graph p:nth-child(3) {
+            position: absolute;
+            min-width: 90px;
+            left: 850px;
+            top: 170px;
+            display: flex;
+            flex-direction: column-reverse;
+            gap: 14px;
+            font-weight: 600;
+            letter-spacing: -1px;
+            text-align: left;
+         }
+         .bookkeeping_graph p:nth-child(4) {
+            position: absolute;
+            min-width: 110px;
+            left: 814px;
+            top: 464px;
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-items: center;
+            gap: 14px;
+            font-weight: 600;
+            letter-spacing: -1px;
+            text-align: left;
+            color: white;
+         }
+         .bookkeeping_graph p:nth-child(5) {
+            position: absolute;
+            min-width: 170px;
+            left: 545px;
+            top: 640px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 14px;
+            font-weight: 600;
+            letter-spacing: -1px;
+            text-align: left;
+         }
+         .bookkeeping_graph p:nth-child(6) {
+            position: absolute;
+            min-width: 120px;
+            left: 290px;
+            top: 580px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 14px;
+            font-weight: 600;
+            letter-spacing: -1px;
+            text-align: center;
+            color: white;
+         }
+         .bookkeeping_graph p:nth-child(7) {
+            position: absolute;
+            min-width: 90px;
+            left: 52px;
+            top: 712px;
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-items: flex-end;
+            gap: 14px;
+            font-weight: 600;
+            letter-spacing: -1px;
+            text-align: center;
+         }
+
+         .twomaon {
+            position: absolute;
+            left: 414px;
+            top: 170px;
+         }
+         .pig {
+            position: absolute;
+            left: 170px;
+            top: 745px;
+         }
       </style>
    </head>
    <body>
       <div class="strok_wave">
-         <svg width="1020" height="913" viewBox="0 0 1020 913" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <div class="bookkeeping_graph">
+            <p>
+               사업관리 중 문제점 발생 <i><img src="img/ico_help.svg" alt="" /></i>
+            </p>
+            <p>
+               S.O.S 버튼 클릭 경리 코디와의 신속한 연결 <i><img src="img/ico_notification.svg" alt="" /></i>
+            </p>
+            <p>
+               경리코디의 장부 검토 <i><img src="img/ico_assignment.svg" alt="" /></i>
+            </p>
+            <p>
+               로봇어드바이저의 문제점 분석 <i><img src="img/ico_precision.svg" alt="" /></i>
+            </p>
+            <p>
+               경리코디의 <br />
+               개선사항 진단<i><img src="img/ico_fact_check.svg" alt="" /></i>
+            </p>
+            <p>
+               빠른 문제 해결<i><img src="img/ico_emoji_objects.svg" alt="" /></i>
+            </p>
+            <p>
+               돈 버는 <br />
+               사업에 집중<i><img src="img/ico_insights.svg" alt="" /></i>
+            </p>
+         </div>
+         <i class="twomaon"><img src="twoman.png" alt="" /></i>
+         <i class="pig"><img src="pig.png" alt="pig" /></i>
+         <svg width="100%" height="913" viewBox="0 0 1020 913" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g id="Group 57453301">
                <path
                   class="path"
@@ -40,6 +177,7 @@
                   stroke="#CFEBFF"
                   stroke-width="169"
                />
+
                <path id="Vector 366" d="M157.586 596.766L262.145 747.903" stroke="white" stroke-width="22" />
                <path id="Vector 359" d="M428.254 47L820 709.5" stroke="white" stroke-width="22" />
                <path id="Vector 360" d="M829.961 53L443 718" stroke="white" stroke-width="22" />
