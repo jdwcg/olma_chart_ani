@@ -4,6 +4,7 @@
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Document</title>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
       <style>
          .strok_wave {
             border: 1px solid tan;
@@ -19,13 +20,16 @@
          }
          @keyframes dash {
             to {
-               stroke-dashoffset: 0;
+               stroke-dashoffset: 3;
             }
          }
          .bookkeeping_graph {
             position: absolute;
          }
-         .bookkeeping_graph p:nth-child(1) {
+         .bookkeeping_graph div p i img {
+            margin: 10px;
+         }
+         .bookkeeping_graph div:nth-child(1) {
             position: absolute;
             min-width: 90px;
             left: 313px;
@@ -38,11 +42,11 @@
             letter-spacing: -1px;
             text-align: right;
          }
-         .bookkeeping_graph p:nth-child(2) {
+         .bookkeeping_graph div:nth-child(2) {
             position: absolute;
             min-width: 160px;
             left: 555px;
-            top: 44px;
+            top: 24px;
             display: flex;
             gap: 14px;
             align-items: center;
@@ -51,7 +55,7 @@
             text-align: center;
             color: white;
          }
-         .bookkeeping_graph p:nth-child(3) {
+         .bookkeeping_graph div:nth-child(3) {
             position: absolute;
             min-width: 90px;
             left: 850px;
@@ -63,10 +67,10 @@
             letter-spacing: -1px;
             text-align: left;
          }
-         .bookkeeping_graph p:nth-child(4) {
+         .bookkeeping_graph div:nth-child(4) {
             position: absolute;
             min-width: 110px;
-            left: 814px;
+            left: 844px;
             top: 464px;
             display: flex;
             flex-direction: column-reverse;
@@ -78,11 +82,11 @@
             text-align: left;
             color: white;
          }
-         .bookkeeping_graph p:nth-child(5) {
+         .bookkeeping_graph div:nth-child(5) {
             position: absolute;
-            min-width: 170px;
-            left: 545px;
-            top: 640px;
+            min-width: 140px;
+            left: 585px;
+            top: 620px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -91,7 +95,7 @@
             letter-spacing: -1px;
             text-align: left;
          }
-         .bookkeeping_graph p:nth-child(6) {
+         .bookkeeping_graph div:nth-child(6) {
             position: absolute;
             min-width: 120px;
             left: 290px;
@@ -105,10 +109,10 @@
             text-align: center;
             color: white;
          }
-         .bookkeeping_graph p:nth-child(7) {
+         .bookkeeping_graph div:nth-child(7) {
             position: absolute;
             min-width: 90px;
-            left: 52px;
+            left: 72px;
             top: 712px;
             display: flex;
             flex-direction: column-reverse;
@@ -119,7 +123,6 @@
             letter-spacing: -1px;
             text-align: center;
          }
-
          .twomaon {
             position: absolute;
             left: 414px;
@@ -130,38 +133,298 @@
             left: 170px;
             top: 745px;
          }
+         @media (max-width: 768px) {
+            *,
+            ul {
+               margin: 0;
+               padding: 0;
+            }
+            .strok_wave {
+               position: relative;
+               border: 1px solid tan;
+               width: 90%;
+               margin: 0 auto;
+               display: flex;
+            }
+            .pig {
+               position: relative;
+               z-index: -1;
+               top: inherit;
+               left: inherit;
+               bottom: inherit;
+               right: 0;
+            }
+            .pig img {
+               width: 80%;
+               position: absolute;
+               left: inherit;
+               right: 0 !important;
+            }
+            .twomaon,
+            .svg_snake {
+               display: none;
+            }
+            .bookkeeping_graph {
+               width: 100%;
+               height: auto;
+               display: grid;
+               grid-template-columns: repeat(2, 1fr);
+               flex-wrap: wrap;
+               flex-direction: column-reverse;
+               gap: 18px;
+            }
+            .bookkeeping_graph > div p {
+               flex: 30%;
+               box-shadow: 0 0 14px rgba(100, 100, 100, 0.2);
+               font-size: 14px;
+            }
+            .bookkeeping_graph > div > p > i > img {
+               display: none;
+            }
+            .bookkeeping_graph > div:nth-child(1),
+            .bookkeeping_graph > div:nth-child(2),
+            .bookkeeping_graph > div:nth-child(3),
+            .bookkeeping_graph > div:nth-child(4),
+            .bookkeeping_graph > div:nth-child(5),
+            .bookkeeping_graph > div:nth-child(6),
+            .bookkeeping_graph > div:nth-child(7) {
+               position: relative;
+               min-width: inherit !important;
+               left: inherit !important;
+               top: inherit !important;
+               display: flex !important;
+               gap: 14px;
+               align-items: center;
+               font-weight: 600;
+               letter-spacing: -1px;
+               text-align: left !important;
+               flex-direction: row-reverse !important;
+               justify-content: flex-end !important;
+               color: #333;
+            }
+            .bookkeeping_graph > div:nth-child(1) {
+               order: 1;
+               position: relative;
+               margin-top: 140px;
+            }
+            .bookkeeping_graph > div:nth-child(1)::after {
+               font-family: "bootstrap-icons";
+               content: "\F138";
+               position: absolute;
+               right: -14px;
+               top: 6px;
+               background: #ddd;
+               width: 20px;
+               height: 20px;
+               border-radius: 50%;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               padding: 5px;
+            }
+            .bookkeeping_graph > div:nth-child(2) {
+               margin-top: 10px;
+               order: 2;
+            }
+            .bookkeeping_graph > div:nth-child(2)::after {
+               font-family: "bootstrap-icons";
+               content: "\F128";
+               position: absolute;
+               left: 50%;
+               transform: translateX(-50%);
+               bottom: 42px;
+               background: #ddd;
+               width: 20px;
+               height: 20px;
+               border-radius: 50%;
+               padding: 5px;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+            }
+            .bookkeeping_graph > div:nth-child(3) {
+               order: 4;
+               position: relative;
+               margin-top: -110px;
+            }
+            .bookkeeping_graph > div:nth-child(3)::after {
+               font-family: "bootstrap-icons";
+               content: "\F128";
+               position: absolute;
+               left: 50%;
+               transform: translateX(-50%);
+               bottom: 43px;
+               background: #ddd;
+               width: 20px;
+               height: 20px;
+               border-radius: 50%;
+               padding: 5px;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+            }
+            .bookkeeping_graph > div:nth-child(4) {
+               order: 6;
+               position: relative;
+               margin-top: -90px;
+            }
+            .bookkeeping_graph > div:nth-child(4)::after {
+               font-family: "bootstrap-icons";
+               content: "\F12F";
+               position: absolute;
+               left: -14px;
+               top: 44px;
+               background: #ddd;
+               width: 20px;
+               height: 20px;
+               border-radius: 50%;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               padding: 5px;
+            }
+            .bookkeeping_graph > div:nth-child(5) {
+               order: 3;
+            }
+            .bookkeeping_graph > div:nth-child(5)::after {
+               font-family: "bootstrap-icons";
+               content: "\F128";
+               position: absolute;
+               left: 50%;
+               transform: translateX(-50%);
+               top: 68px;
+               background: #ddd;
+               width: 20px;
+               height: 20px;
+               border-radius: 50%;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               padding: 5px;
+            }
+            .bookkeeping_graph > div:nth-child(6) {
+               order: 5;
+            }
+            .bookkeeping_graph > div:nth-child(6)::after {
+               font-family: "bootstrap-icons";
+               content: "\F128";
+               position: absolute;
+               left: 50%;
+               transform: translateX(-50%);
+               top: 52px;
+               background: #ddd;
+               width: 20px;
+               height: 20px;
+               border-radius: 50%;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               padding: 5px;
+            }
+            .bookkeeping_graph > div:nth-child(7) {
+               order: 7;
+               justify-content: flex-end;
+            }
+
+            .bookkeeping_graph > i:nth-child(8) {
+               order: 8;
+               margin-top: -30px;
+            }
+            .bookkeeping_graph > div p {
+               padding: 24px 16px;
+               border: 1px solid #bbb;
+               border-radius: 10px;
+               display: flex;
+               justify-content: flex-end;
+               flex-direction: row-reverse;
+               gap: 16px;
+            }
+
+            .bookkeeping_graph > div:nth-child(1) p i {
+               display: inline-block;
+               background: center/contain url("./img/ico_help.svg") no-repeat;
+               min-width: 20px;
+               min-height: 20px;
+            }
+            .bookkeeping_graph > div:nth-child(2) p i {
+               display: inline-block;
+               background: center/contain url("./img/ico_notification_b.svg") no-repeat;
+               min-width: 20px;
+               min-height: 20px;
+            }
+            .bookkeeping_graph > div:nth-child(3) p i {
+               background: center/contain url("./img/ico_assignment.svg") no-repeat;
+               min-width: 20px;
+               min-height: 20px;
+            }
+            .bookkeeping_graph > div:nth-child(4) p i {
+               background: center/contain url("./img/ico_precision_b.svg") no-repeat;
+               min-width: 20px;
+               min-height: 20px;
+            }
+            .bookkeeping_graph > div:nth-child(5) p i {
+               background: center/contain url("./img/ico_fact_check.svg") no-repeat;
+               min-width: 20px;
+               min-height: 20px;
+            }
+            .bookkeeping_graph > div:nth-child(6) p i {
+               background: center/contain url("./img/ico_emoji_objects_b.svg") no-repeat;
+               min-width: 20px;
+               min-height: 20px;
+            }
+            .bookkeeping_graph > div:nth-child(7) p i {
+               background: center/contain url("./img/ico_insights.svg") no-repeat;
+               min-width: 20px;
+               min-height: 20px;
+            }
+         }
       </style>
    </head>
    <body>
       <div class="strok_wave">
          <div class="bookkeeping_graph">
-            <p>
-               사업관리 중 문제점 발생 <i><img src="img/ico_help.svg" alt="" /></i>
-            </p>
-            <p>
-               S.O.S 버튼 클릭 경리 코디와의 신속한 연결 <i><img src="img/ico_notification.svg" alt="" /></i>
-            </p>
-            <p>
-               경리코디의 장부 검토 <i><img src="img/ico_assignment.svg" alt="" /></i>
-            </p>
-            <p>
-               로봇어드바이저의 문제점 분석 <i><img src="img/ico_precision.svg" alt="" /></i>
-            </p>
-            <p>
-               경리코디의 <br />
-               개선사항 진단<i><img src="img/ico_fact_check.svg" alt="" /></i>
-            </p>
-            <p>
-               빠른 문제 해결<i><img src="img/ico_emoji_objects.svg" alt="" /></i>
-            </p>
-            <p>
-               돈 버는 <br />
-               사업에 집중<i><img src="img/ico_insights.svg" alt="" /></i>
-            </p>
+            <div>
+               <p>
+                  사업관리 중 문제점 발생 <i><img src="./img/ico_help.svg" alt="ico_help" /></i>
+               </p>
+            </div>
+            <div>
+               <p>
+                  S.O.S 버튼 클릭 경리 코디와의 신속한 연결 <i><img src="./img/ico_notification.svg" alt="ico_notification" /></i>
+               </p>
+            </div>
+            <div>
+               <p>
+                  경리코디의 장부 검토 <i><img src="./img/ico_assignment.svg" alt="ico_assignment" /></i>
+               </p>
+            </div>
+            <div>
+               <p>
+                  로봇어드바이저의 문제점 분석 <i><img src="./img/ico_precision.svg" alt="ico_precision" /></i>
+               </p>
+            </div>
+            <div>
+               <p>
+                  경리코디의 <br />
+                  개선사항 진단<i><img src="./img/ico_fact_check.svg" alt="ico_fact_check" /></i>
+               </p>
+            </div>
+            <div>
+               <p>
+                  빠른 문제 해결<i><img src="./img/ico_emoji_objects.svg" alt="ico_emoji_objects" /></i>
+               </p>
+            </div>
+            <div>
+               <p>
+                  돈 버는 <br />
+                  사업에 집중<i><img src="./img/ico_insights.svg" alt="ico_insights" /></i>
+               </p>
+            </div>
+            <i class="pig"><img src="pig.png" alt="pig" /></i>
          </div>
          <i class="twomaon"><img src="twoman.png" alt="" /></i>
-         <i class="pig"><img src="pig.png" alt="pig" /></i>
-         <svg width="100%" height="913" viewBox="0 0 1020 913" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+         <svg class="svg_snake" width="100%" height="1010" viewBox="0 0 1020 1010" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g id="Group 57453301">
                <path
                   class="path"
@@ -177,11 +440,17 @@
                   stroke="#CFEBFF"
                   stroke-width="169"
                />
-
                <path id="Vector 366" d="M157.586 596.766L262.145 747.903" stroke="white" stroke-width="22" />
                <path id="Vector 359" d="M428.254 47L820 709.5" stroke="white" stroke-width="22" />
                <path id="Vector 360" d="M829.961 53L443 718" stroke="white" stroke-width="22" />
                <path id="Vector 363" d="M245 390H1019.5" stroke="white" stroke-width="22" />
+               <path
+                  id="Union"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M85.2453 1003.95V1004L85.2753 1003.98L85.3053 1004V1003.95L169.551 934H85.3053H85.2453H1L85.2453 1003.95Z"
+                  fill="#CFEBFF"
+               />
             </g>
          </svg>
       </div>
